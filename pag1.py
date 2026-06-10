@@ -41,7 +41,7 @@ elif op == "5":
     Simbolo=input("Ingrese un símbolo: ")
     Numero=int(input("Ingrese un número: "))
 
-    Contraseña=Apellido+Nombre+str(edad)+Simbolo+str(Numero)
+    Contraseña=Apellido+(Apellido[0:3])+Nombre+(Nombre[1:3])+str(edad)+Simbolo+str(Numero)
 
     print("Tu contraseña personalizada es:", Contraseña)
 
