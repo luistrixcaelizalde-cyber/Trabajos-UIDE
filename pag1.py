@@ -41,9 +41,36 @@ elif op == "5":
     Simbolo=input("Ingrese un símbolo: ")
     Numero=int(input("Ingrese un número: "))
 
-    Contraseña=Apellido+(Apellido[0:3])+Nombre+(Nombre[1:3])+str(edad)+Simbolo+str(Numero)
+    Contraseña=(Apellido[0:3])+(Nombre[1:3])+str(edad)+Simbolo+str(Numero)
 
     print("Tu contraseña personalizada es:", Contraseña)
 
 else:
     print("Opción no válida")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i = 5
+
+while i <= 5 and i > 0:
+    print(i)
+    i = i - 1
+
+print("fin codigo")
