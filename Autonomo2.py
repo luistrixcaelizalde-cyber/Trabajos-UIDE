@@ -5,7 +5,7 @@ ejecutar = True
 
 while ejecutar:
 
-    print("\n===== GESTOR DE CONTRASEÑAS =====")
+    print("\n GESTOR DE CONTRASEÑAS ")
     print("1. Generar contraseña")
     print("2. Analizar contraseña")
     print("3. Guardar contraseña")
@@ -14,7 +14,6 @@ while ejecutar:
 
     opcion = input("Seleccione una opción: ")
 
-    # OPCION 1
     if opcion == "1":
 
         letras = "abcdefghijklmnopqrstuvwxyz"
@@ -22,17 +21,16 @@ while ejecutar:
 
         contraseña = ""
 
-        # Genera 6 letras
-        for i in range(6):
+        # Genera 7 letras
+        for i in range(7):
             contraseña += random.choice(letras)
 
-        # Agrega 2 números
-        for i in range(2):
+        # Agrega 5 números
+        for i in range(5):
             contraseña += random.choice(numeros)
 
         print("\nContraseña generada:", contraseña)
 
-    # OPCION 2
     elif opcion == "2":
 
         contraseña = input("Ingrese una contraseña: ")
@@ -63,15 +61,12 @@ while ejecutar:
             print("\nSeguridad: INTERMEDIA")
             print("Podría mejorarse agregando más caracteres.")
 
-    # OPCION 3
     elif opcion == "3":
         print("\nFunción en desarrollo.")
 
-    # OPCION 4
     elif opcion == "4":
         print("\nFunción en desarrollo.")
 
-    # OPCION 5
     elif opcion == "5":
         print("\nGracias por utilizar el programa.")
         ejecutar = False
