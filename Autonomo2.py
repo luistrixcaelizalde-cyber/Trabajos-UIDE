@@ -1,30 +1,39 @@
 import random
+
+# Variable para mantener el programa ejecutándose
 ejecutar = True
 
 while ejecutar:
 
-    print("\nMENU PRINCIPAL")
+    print("\n===== GESTOR DE CONTRASEÑAS =====")
     print("1. Generar contraseña")
-    print("2. Personalizada")
+    print("2. Analizar contraseña")
     print("3. Guardar contraseña")
     print("4. Historial")
     print("5. Salir")
 
-    opcion = int(input("Seleccione una opción: "))
+    opcion = input("Seleccione una opción: ")
 
-    if opcion == 1:
+    # OPCION 1
+    if opcion == "1":
 
         letras = "abcdefghijklmnopqrstuvwxyz"
         numeros = "0123456789"
 
         contraseña = ""
 
-        for i in range(8):
-            contraseña += random.choice(letras + numeros)
+        # Genera 6 letras
+        for i in range(6):
+            contraseña += random.choice(letras)
 
-        print("Contraseña generada:", contraseña)
+        # Agrega 2 números
+        for i in range(2):
+            contraseña += random.choice(numeros)
 
-    elif opcion == 2:
+        print("\nContraseña generada:", contraseña)
+
+    # OPCION 2
+    elif opcion == "2":
 
         contraseña = input("Ingrese una contraseña: ")
 
@@ -41,35 +50,31 @@ while ejecutar:
             if caracter.isupper():
                 tiene_mayuscula = True
 
+        # Evaluación de seguridad
         if longitud < 6:
-            print("Seguridad: DÉBIL")
-            print("Es fácil de adivinar.")
-
-        elif longitud >= 6 and (tiene_numero or tiene_mayuscula):
-            print("Seguridad: INTERMEDIA")
-            print("Podría mejorarse.")
+            print("\nSeguridad: DÉBIL")
+            print("La contraseña es fácil de adivinar.")
 
         elif longitud >= 8 and tiene_numero and tiene_mayuscula:
-            print("Seguridad: SEGURA")
-            print("Buena contraseña.")
+            print("\nSeguridad: SEGURA")
+            print("La contraseña cumple los requisitos básicos.")
 
         else:
-            print("Seguridad: INTERMEDIA")
+            print("\nSeguridad: INTERMEDIA")
+            print("Podría mejorarse agregando más caracteres.")
 
     # OPCION 3
-    elif opcion == 3:
-        print("Guardar contraseña")
-        # Pendiente
+    elif opcion == "3":
+        print("\nFunción en desarrollo.")
 
     # OPCION 4
-    elif opcion == 4:
-        print("Mostrar historial")
-        # Pendiente
+    elif opcion == "4":
+        print("\nFunción en desarrollo.")
 
     # OPCION 5
-    elif opcion == 5:
-        print("Gracias por usar el programa.")
+    elif opcion == "5":
+        print("\nGracias por utilizar el programa.")
         ejecutar = False
 
     else:
-        print("Opción inválida.")
+        print("\nOpción inválida. Intente nuevamente.")
