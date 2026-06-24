@@ -1,8 +1,8 @@
-def mostrar_historial():
+def mostrar_historial(usuario):
 
     try:
 
-        with open("datos/historial.txt", "r") as archivo:
+        with open("datos/" + usuario + ".txt", "r") as archivo:
 
             print("\n===== HISTORIAL =====")
 
@@ -18,4 +18,4 @@ def mostrar_historial():
 
     except FileNotFoundError:
 
-        print("No existe historial.")
+        print("No tiene contraseñas guardadas.")

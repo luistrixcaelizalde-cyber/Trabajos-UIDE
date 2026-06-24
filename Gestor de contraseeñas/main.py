@@ -62,11 +62,11 @@ while ejecutar:
 
                 elif opcion_menu == "3":
 
-                    guardar_contraseña()
+                    guardar_contraseña(usuario)
 
                 elif opcion_menu == "4":
 
-                    mostrar_historial()
+                    mostrar_historial(usuario)
 
                 elif opcion_menu == "5":
 
