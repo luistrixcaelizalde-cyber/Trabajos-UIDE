@@ -21,12 +21,12 @@ while ejecutar:
 
         contraseña = ""
 
-        # Genera 7 letras
-        for i in range(7):
+        # Genera 6 letras
+        for i in range(6):
             contraseña += random.choice(letras)
 
-        # Agrega 5 números
-        for i in range(5):
+        # Agrega 4 números
+        for i in range(4):
             contraseña += random.choice(numeros)
 
         print("\nContraseña generada:", contraseña)
